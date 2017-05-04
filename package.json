@@ -1,0 +1,13 @@
+{
+  "name": "pug-mailer",
+  "version": "1.0.0",
+  "description": "Send emails with SMTP & Mailgun using PugJS templates.",
+  "main": "index.js",
+  "repository": "https://github.com/103058/pug-mailer",
+  "author": "Ion Suman",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^4.0.1",
+    "pug": "^2.0.0-rc.1"
+  }
+}
