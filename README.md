@@ -73,6 +73,8 @@ mailer.send({
     //
   }
 })
+.then(response => console.log('Message sent!'))
+.catch(err => console.log('Something went wrong!'))
 ```
 
 Using [Mailgun](https://www.mailgun.com/):
@@ -97,6 +99,8 @@ mailer.send({
     foo: 'bar'
   }
 })
+.then(response => console.log('Message sent!'))
+.catch(err => console.log('Something went wrong!'))
 ```
 
 ## Template Files
@@ -105,7 +109,7 @@ You should be already familiar with [PugJS](https://pugjs.org/)
 previously known as *Jade*, but if not, read their awesome documentation.
 PugJS template files are *the best* and *the fastest* way to write HTML code.
 
-`pug-mailer` compiles the PugJS template files with given `data` and the sends
+`pug-mailer` compiles the PugJS template files with given `data` and then sends
 emails using the defined `nodemailer` transporter.
 
 Template files should be locaded at: `process.cwd() + '/mails/templates/'`
