@@ -1,9 +1,9 @@
-
 'use strict'
 
 const nodemailer = require('nodemailer')
 const pug = require('pug')
 const path = require('path')
+const juice = require('juice')
 
 let settings = null
 let transporter = null
@@ -84,7 +84,7 @@ exports.send = options => new Promise((resolve, reject) => {
       }
       pug.renderFile(file, data, (err, html) => {
         if (err) return reject(err)
-        options.html = html
+        options.html = juice(html)
         sendMail(options).then(resolve).catch(reject)
       })
     })
